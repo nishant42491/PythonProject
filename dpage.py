@@ -150,7 +150,7 @@ class Ui_MainWindow(object):
             
         mycur.execute("select stock from product where productid={}".format(pid1)) 
         b=mycur.fetchone()
-        new4=b[0]+left
+        new4=b[0]+pqu
         mycur.execute("update product set stock = {} where productid={}".format(new4,pid1))
         mydb.commit()
 
